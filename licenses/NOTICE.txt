@@ -1,0 +1,2 @@
+笔顺字形来源：Make Me a Hanzi (skishore/makemeahanzi)，基于 Arphic PL KaitiM GB / Arphic PL UKai。Copyright (C) 1999 Arphic Technology Co., Ltd. 字形按 Arphic Public License 提供，无担保，可依该授权再分发。本应用于 2026-09-08 选取 40 个字形，按原记录分别保存为 JSON，未修改笔画路径。原始子集文件随应用提供于 hanzi 目录。
+笔顺播放器：Hanzi Writer 3.7.3，MIT License。
