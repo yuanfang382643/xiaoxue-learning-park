@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ecf7ee"><title>小雪学习乐园 · 在线学习与安卓下载</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f7ed;color:#29483e;font-family:system-ui,"Microsoft YaHei",sans-serif}main{max-width:1040px;margin:auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:8px 0 25px}header strong{font-size:20px}a{color:#286c53}header a{font-size:14px}.hero{display:grid;grid-template-columns:1fr 1fr;background:#e7f3e6;border-radius:32px;overflow:hidden;border:1px solid #d4e4d1}.copy{padding:40px 32px}.eyebrow{font-size:13px;letter-spacing:2px;color:#52755b}h1{font-size:42px;line-height:1.3;margin:16px 0}p{line-height:1.85}.hero img{width:100%;height:100%;min-height:340px;object-fit:cover}.actions{display:grid;gap:12px;margin-top:24px}.button{display:block;text-align:center;padding:16px;border-radius:16px;text-decoration:none;font-weight:700;background:#316b50;color:white;min-height:52px}.secondary{background:#fff8de;color:#635126;border:1px solid #decf99}.button[aria-disabled=true]{background:#e1e5dd;color:#637064;cursor:default}.meta{font-size:12px;color:#5b7264;margin:12px 0 0}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}.fact{background:white;border:1px solid #e0e7d7;border-radius:20px;padding:24px}.fact b{display:block;font-size:27px;color:#316b50;margin-bottom:6px}.fact span{font-size:14px}.notes{background:#fffdf5;border:1px solid #e6dfc8;border-radius:24px;padding:24px}h2{font-size:19px;margin:0 0 12px}.notes p{font-size:14px;margin:8px 0}.steps{display:flex;gap:12px;margin:20px 0}.steps span{flex:1;padding:18px 12px;background:white;border-radius:16px;line-height:1.7;font-size:14px}.steps b{display:block;font-size:24px;color:#51825b}footer{text-align:center;font-size:12px;padding:24px 0 4px;color:#67796c}a:focus-visible{outline:3px solid #c78329;outline-offset:4px}@media(max-width:650px){main{padding:16px}.hero{display:flex;flex-direction:column-reverse}.hero img{height:210px;min-height:0;object-position:center 55%}.copy{padding:24px}h1{font-size:32px}.facts{gap:8px}.fact{padding:16px 10px}.fact b{font-size:24px}.fact span{font-size:12px}.steps{flex-direction:column}.steps span{display:flex;align-items:center;gap:16px}.notes{padding:20px}}
+</style>
+</head>
+<body><main>
+<header><strong>小雪学习乐园</strong><a href="./guide.html">家长图示指南 ↗</a></header>
+<section class="hero"><div class="copy"><span class="eyebrow">和小伙伴一起，每天进步一点点</span><h1>把好奇心，<br>变成学习的快乐。</h1><p>数一数、读一读、写一写、说一说。<br>在图片、故事和小游戏里，走好入学第一步。</p><div class="actions"><a class="button" href="./">进入网页版 · 开始探索</a><a class="button secondary" id="apk" aria-disabled="true">安卓安装包 · 正在准备发布</a></div><p class="meta">课程扩充体验版 1.1 · 安卓 APK 约 69 MB<br>电脑、苹果手机可使用网页版；APK 仅适用于安卓。</p></div><img src="./art/island.png" alt="动物伙伴生活的绘本学习岛"></section>
+<section class="facts" aria-label="课程内容"><div class="fact"><b>210 节</b><span>从零基础到一年级练习</span></div><div class="fact"><b>90 个字</b><span>联系图片认识字义</span></div><div class="fact"><b>41 个字</b><span>看笔顺、动手描红</span></div></section>
+<section class="notes"><h2>第一次安装，家长陪着做</h2><div class="steps"><span><b>1</b>用手机浏览器打开本页</span><span><b>2</b>下载并打开 APK 文件</span><span><b>3</b>按系统提示完成安装</span></div><p>遇到安装提示或已有旧版本？先看<a href="./guide.html">图示安装与备份指南</a>，保留原应用并导出学习记录。</p><p>网页版记录保存在当前浏览器，App 记录保存在手机。家庭账号云同步尚未开通，换设备前请在家长区导出备份；隐私浏览或清理浏览器数据可能导致记录丢失。</p><p>网页版首次学习需联网加载图片和语音；安卓安装后课程素材可离线使用。请先由家长试听教学语音，拼音发音仍需逐条人工核验。</p><p id="download-note">下载链接将在 GitHub 发布完成后启用。</p></section>
+<footer>无广告 · 无内购 · 不采集孩子照片和录音<br>原创练习内容，不是教材出版社官方应用。</footer>
+</main><script>
+// 根据实际 GitHub Pages 地址生成同一仓库的稳定下载链接，不写入猜测的账号。
+const host = location.hostname;
+const repo = location.pathname.split('/').filter(Boolean)[0];
+if (host.endsWith('.github.io') && repo && repo !== 'download.html') {
+  const owner = host.slice(0, -'.github.io'.length);
+  const link = document.getElementById('apk');
+  link.href = `https://github.com/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/releases/latest/download/xiaoxue-learning-park.apk`;
+  link.removeAttribute('aria-disabled');
+  link.textContent = '下载安卓 App · 约 69 MB';
+  document.getElementById('download-note').textContent = '安装包由 GitHub 提供下载，部分网络可能加载较慢。';
+}
+</script></body></html>
